@@ -1,0 +1,10 @@
+.noga {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #f58585;
+    color: #ffffff;
+    text-align: center;
+}
