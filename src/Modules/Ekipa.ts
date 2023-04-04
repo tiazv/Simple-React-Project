@@ -5,13 +5,15 @@ export class Ekipa {
     private letoUstanovitve: number;
     private direktor: Funkcionar;
     private trener: Funkcionar;
+    private id: number;
     private igralci: Igralec[];
 
-    constructor(ime: string, letoUstanovitve: number, direktor: Funkcionar, trener: Funkcionar){
+    constructor(ime: string, letoUstanovitve: number, direktor: Funkcionar, trener: Funkcionar, id: number){
         this.ime = ime;
         this.letoUstanovitve = letoUstanovitve;
         this.direktor = direktor;
         this.trener = trener;
+        this.id = id;
         this.igralci = [];
     }
 

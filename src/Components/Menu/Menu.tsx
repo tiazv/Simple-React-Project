@@ -1,22 +1,15 @@
 import * as React from 'react';
-import { Ekipa } from "../../Modules/Primer";
+import Ekipa from '../Ekipe/Ekipa';
 import './Menu.css';
 
-{/*
-export function Menu() {
-    return (
-    <div>
-        <h1>Ekipa {ekipca.ime}</h1>
-    </div>
-    )
-}
-*/}
+interface MenuProps {
+    ime: string;
+};
 
-const Menu = (props: {ime: string}) => {
-    const { ime } = props;
+const Menu = (props: MenuProps) => {
     return (
         <div className='menu'>
-            <h1>Ekipa {ime}</h1>
+            <h1>Ekipa {props.ime}</h1>
         </div>
     );
 };

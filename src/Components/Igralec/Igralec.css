@@ -2,24 +2,20 @@
     background-color: #f6c6c6;
     border: 2px solid #f3dfdf;
     border-radius: 4px;
-    padding: 10px;
-    margin-bottom: 30px;
+    padding: 5px;
+    margin-bottom: 10px;
   }
   
   .igralec b {
     font-size: 1.1em;
-    margin-bottom: 10px;
     color: #2786e4;
   }
   
   .igralec ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
   }
   
   .igralec li {
-    margin-bottom: 5px;
     font-size: 0.9em;
     color: rgb(68, 163, 241);
   }

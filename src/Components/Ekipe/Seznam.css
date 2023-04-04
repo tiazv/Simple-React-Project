@@ -1,0 +1,31 @@
+.list {
+    display: flex;
+  }
+  
+  .list-items {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .list-item {
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .list-link {
+    text-decoration: none;
+    color: #f58f8f;
+    font-size: 16px;
+    padding: 8px;
+    border: 1px solid #f78394;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .list-link:hover {
+    background-color: #90c1f2;
+    color: #fff;
+  }

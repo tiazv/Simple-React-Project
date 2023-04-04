@@ -45,8 +45,41 @@ export const zan: Igralec = {
     poskodovan: true
 }
 
+export const alen: Igralec = {
+	ime: "Alen",
+    priimek: "Bobinski",
+    letoRojstva: 1994,
+    krajRojstva: "Maribor",
+    id: 9,
+    visina: 188,
+    teza: 78,
+    poskodovan: true
+}
+
+export const grega: Igralec = {
+	ime: "Grega",
+    priimek: "Simonič",
+    letoRojstva: 1999,
+    krajRojstva: "Celje",
+    id: 10,
+    visina: 192,
+    teza: 83,
+    poskodovan: false
+}
+
+export const marko: Igralec = {
+	ime: "Marko",
+    priimek: "Ugwoegbulam",
+    letoRojstva: 2000,
+    krajRojstva: "Maribor",
+    id: 11,
+    visina: 171,
+    teza: 98,
+    poskodovan: true
+}
+
 export const prviT: Funkcionar = {
-    ime: "Marko",
+    ime: "Miha",
     priimek: "Zadravec",
     letoRojstva: 1985,
     krajRojstva: "Celje",
@@ -65,13 +98,37 @@ export const prviD: Funkcionar = {
     veljavnost: 30
 }
 
+export const drugiT: Funkcionar = {
+    ime: "Klara",
+    priimek: "Krepek",
+    letoRojstva: 1990,
+    krajRojstva: "Ptuj",
+    id: 7,
+    vloga: "trener",
+    veljavnost: 40
+}
+
+export const drugiD: Funkcionar = {
+    ime: "Maja",
+    priimek: "Marčič",
+    letoRojstva: 1979,
+    krajRojstva: "Maribor",
+    id: 8,
+    vloga: "direktor",
+    veljavnost: 30
+}
 
 
-const ekipa1: Ekipa = new Ekipa("Prva", 2020, prviD, prviT);
+const ekipa1: Ekipa = new Ekipa("Prva", 2020, prviD, prviT, 1);
+const ekipa2: Ekipa = new Ekipa("Druga", 2021, drugiD, drugiT, 2);
 
 ekipa1.dodajIgralca(miha);
 ekipa1.dodajIgralca(nika);
 ekipa1.dodajIgralca(luka);
+
+ekipa2.dodajIgralca(alen);
+ekipa2.dodajIgralca(grega);
+ekipa2.dodajIgralca(marko);
 
 luka.teza = 80;
 ekipa1.posodobiIgralca(luka);
@@ -79,5 +136,6 @@ ekipa1.odstraniIgralca(2);
 ekipa1.dodajIgralca(zan);
 
 console.log(ekipa1.izpisiPodatke());
+console.log(ekipa2.izpisiPodatke());
 
-export { Ekipa };
+export { ekipa1, ekipa2 };

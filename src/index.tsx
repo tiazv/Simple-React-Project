@@ -1,15 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import App, { ekipe1 } from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, createBrowserRouter, Route, RouterProvider, Routes } from "react-router-dom";
+import Ekipa from './Components/Ekipe/Ekipa';
+import DodajEkipo from "./Components/Ekipe/DodajEkipo";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        path: "/ekipa/:ekipaId",
+        element: <Ekipa ekipe={ekipe1} />,
+      },
+      {
+        path: "/dodajEkipo",
+        element: <DodajEkipo ekipe={ekipe1} />,
+      },
+    ],
+  },
+]);
 root.render(
   <React.StrictMode>
-    <App />
+   <RouterProvider router={router} />
   </React.StrictMode>
 );
 

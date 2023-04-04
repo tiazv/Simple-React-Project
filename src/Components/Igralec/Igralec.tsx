@@ -1,11 +1,14 @@
-import { Igralec } from "../../Modules/Oseba";
-import { Igralcek } from "../../App";
+//import { Igralec } from "../../Modules/Oseba";
+import { IgralecInterface } from "../../App";
 import './Igralec.css';
 import React from "react";
 
+interface IgralecProps {
+    igralec: IgralecInterface;
+};
 
-const Igralec1 = (props: {igralec: Igralcek}) => {
-    const { igralec } = props;
+const Igralec = (props: IgralecProps) => {
+    const igralec = props.igralec;
     return (
         <div className="igralec">
             <b>{igralec.ime} {igralec.priimek}</b>
@@ -19,4 +22,4 @@ const Igralec1 = (props: {igralec: Igralcek}) => {
     );
 };
 
-export default Igralec1;
+export default Igralec;
